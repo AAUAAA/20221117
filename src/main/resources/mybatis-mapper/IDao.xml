@@ -10,4 +10,7 @@
 	insert into member (mid, mpw, mname, memail) values (#{param1},#{param2},#{param3},#{param4})
 	</insert>
 	
+	<select id="memberList" resultType="com.pengsoo.test.dto.MemberDto">
+	select * from member 
+	</select>
 </mapper>
