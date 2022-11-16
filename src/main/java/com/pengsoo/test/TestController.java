@@ -62,4 +62,26 @@ public class TestController {
 		return "memberList";
 	}
 	
+
+	@RequestMapping(value = "idSearch")//idSearch 화면만 보여준다.
+	public String idSearch() {
+		
+		return "idSearch";
+	}
+	
+	@RequestMapping(value = "idOk")//idSearch에서 idOk 실행할 맵핑
+	public String idOk(HttpServletRequest request, Model model) {
+		
+		String searchId = request.getParameter("searchId");
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		MemberDto mdto = dao.searchIdOk(searchId);
+		model.addAttribute("searchRs", mdto);
+		
+		System.out.println(mdto.getMdate());
+		
+		return "idOk";
+	}
+	
+	
 }

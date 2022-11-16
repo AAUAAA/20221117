@@ -20,7 +20,7 @@ public class MemberDto {
 	private String mpw;
 	private String mname;
 	private String memail;
-	private Timestamp mdate;
+	private String mdate;
 	
 	
 }

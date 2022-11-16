@@ -13,4 +13,9 @@
 	<select id="memberList" resultType="com.pengsoo.test.dto.MemberDto">
 	select * from member 
 	</select>
+	
+	<select id="searchIdOk" resultType="com.pengsoo.test.dto.MemberDto">
+	select * from member where mid=#{param1}
+	</select>
+	
 </mapper>
